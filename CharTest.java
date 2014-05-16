@@ -1,4 +1,4 @@
-import GeneticAlgorithm.*;
+import EvoLib.*;
 import java.util.*;
 
 public class CharTest implements Solution{
