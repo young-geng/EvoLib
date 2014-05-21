@@ -5,13 +5,8 @@
 
 package EvoLib;
 
-public interface Solution extends Comparable {
+public interface Solution{
 
-
-
-	public void evaluate();
-
-	public int compareTo(Solution s);
 
 	public int fitness();
 
