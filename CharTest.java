@@ -4,7 +4,7 @@ import java.util.*;
 public class CharTest implements Solution{
 	public int[] value;
 	public int fitness;
-	public final static int SIZE = 20;
+	public final static int SIZE = 200;
 
 	public CharTest() {
 		value = new int[SIZE];
@@ -40,10 +40,10 @@ public class CharTest implements Solution{
 
 
 	public static void main(String[] args) {
-		SimplePool<CharTest> pool = new SimplePool<CharTest>(50, new CharTest(), 5, 24);
+		SolutionPool<CharTest> pool = new SAPool<CharTest>(new CharTest());
 		System.out.println(pool.averageFitness());
         for (int i = 0; i < 1000; i++) {
-            pool.evolve(10);
+            pool.evolve(10000);
             System.out.println("Generation: " + i + "  Fitness:  " + pool.averageFitness());
 		}
         return;
