@@ -1,5 +1,5 @@
 /**
- * Simulated annealing algorithm
+ * Simulated annealing algorithm pool
  */
 
 
@@ -9,7 +9,7 @@ import java.util.*;
 public class SAPool<S extends Solution> implements SolutionPool<S> {
 	SolutionWrapper bestSolution, currentSolution;
 	long generation;
-	static double ACCEPT_COEFFICIENT = 5;
+	static double ACCEPT_COEFFICIENT = 50;
 
 	public SAPool(S origin) {
 		currentSolution = new SolutionWrapper(origin);

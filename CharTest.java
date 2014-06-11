@@ -40,10 +40,10 @@ public class CharTest implements Solution{
 
 
 	public static void main(String[] args) {
-		SolutionPool<CharTest> pool = new SAPool<CharTest>(new CharTest());
+		SolutionPool<CharTest> pool = new SimplePool<CharTest>(40, new CharTest(), 4, 16);
 		System.out.println(pool.averageFitness());
         for (int i = 0; i < 1000; i++) {
-            pool.evolve(10000);
+            pool.evolve(100);
             System.out.println("Generation: " + i + "  Fitness:  " + pool.averageFitness());
 		}
         return;
